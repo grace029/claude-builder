@@ -1,0 +1,204 @@
+.profile {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.profile-header {
+  text-align: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-header h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.level-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6700 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FF6700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.progress-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.progress-bar-container {
+  background: #e9ecef;
+  border-radius: 25px;
+  height: 30px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6700 100%);
+  height: 100%;
+  border-radius: 25px;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.progress-text {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.milestone-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.milestone-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.milestone-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fff9f0 0%, #fff3e6 100%);
+  border-radius: 15px;
+  border: 2px solid #FFD700;
+}
+
+.milestone-icon {
+  font-size: 3rem;
+}
+
+.milestone-info h3 {
+  color: #FF6700;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.milestone-info p {
+  color: #666;
+}
+
+.achievements-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.achievements-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.achievement {
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.achievement.locked {
+  background: #f8f9fa;
+  opacity: 0.5;
+}
+
+.achievement.unlocked {
+  background: linear-gradient(135deg, #fff9f0 0%, #fff3e6 100%);
+  border: 2px solid #FFD700;
+  transform: scale(1.05);
+}
+
+.achievement-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievement p {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.achievement small {
+  color: #666;
+  font-size: 0.8rem;
+}
