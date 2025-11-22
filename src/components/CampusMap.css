@@ -1,0 +1,124 @@
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+/* Custom marker styles */
+.custom-marker {
+  background: none;
+  border: none;
+}
+
+.marker-pin {
+  width: 30px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+}
+
+.marker-pin.unvisited {
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6700 100%);
+  box-shadow: 0 2px 8px rgba(255, 103, 0, 0.4);
+}
+
+.marker-pin.visited {
+  background: linear-gradient(135deg, #28a745 0%, #20803a 100%);
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+}
+
+.marker-pin:hover {
+  transform: rotate(-45deg) scale(1.1);
+}
+
+.marker-emoji {
+  transform: rotate(45deg);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup styles */
+.map-popup {
+  min-width: 200px;
+  font-family: inherit;
+}
+
+.map-popup h3 {
+  color: #FF6700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.popup-category {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.popup-description {
+  color: #666;
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.9rem;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.popup-tokens {
+  font-weight: bold;
+  color: #FF6700;
+}
+
+.popup-visited {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.popup-visit-button {
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6700 100%);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.popup-visit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255, 103, 0, 0.3);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 15px;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}

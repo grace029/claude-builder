@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Locations.css';
+import CampusMap from './CampusMap';
 
 const CAMPUS_LOCATIONS = [
   {
@@ -8,7 +9,8 @@ const CAMPUS_LOCATIONS = [
     category: "Hidden Gem",
     description: "A tranquil garden tucked behind Prospect House, perfect for quiet study or reflection.",
     tokens: 10,
-    difficulty: "Easy"
+    difficulty: "Easy",
+    coordinates: [40.3487, -74.6594]
   },
   {
     id: 2,
@@ -16,7 +18,8 @@ const CAMPUS_LOCATIONS = [
     category: "Scenic Spot",
     description: "An elevated garden space with stunning views of campus architecture.",
     tokens: 10,
-    difficulty: "Medium"
+    difficulty: "Medium",
+    coordinates: [40.3498, -74.6564]
   },
   {
     id: 3,
@@ -24,7 +27,8 @@ const CAMPUS_LOCATIONS = [
     category: "Adventure",
     description: "Explore the historic steam tunnels connecting various campus buildings.",
     tokens: 10,
-    difficulty: "Hard"
+    difficulty: "Hard",
+    coordinates: [40.3460, -74.6552]
   },
   {
     id: 4,
@@ -32,7 +36,8 @@ const CAMPUS_LOCATIONS = [
     category: "Hidden Gem",
     description: "A quiet courtyard space behind the famous graffiti wall on University Place.",
     tokens: 10,
-    difficulty: "Easy"
+    difficulty: "Easy",
+    coordinates: [40.3445, -74.6583]
   },
   {
     id: 5,
@@ -40,7 +45,8 @@ const CAMPUS_LOCATIONS = [
     category: "Historic",
     description: "An often-overlooked sundial with inscriptions dating back to the 1800s.",
     tokens: 10,
-    difficulty: "Easy"
+    difficulty: "Easy",
+    coordinates: [40.3478, -74.6580]
   },
   {
     id: 6,
@@ -48,7 +54,8 @@ const CAMPUS_LOCATIONS = [
     category: "Nature",
     description: "A unique ecological preserve just off campus with rare plant species.",
     tokens: 10,
-    difficulty: "Medium"
+    difficulty: "Medium",
+    coordinates: [40.3425, -74.6515]
   },
   {
     id: 7,
@@ -56,7 +63,8 @@ const CAMPUS_LOCATIONS = [
     category: "Architectural",
     description: "A beautiful Gothic courtyard that most students walk past without entering.",
     tokens: 10,
-    difficulty: "Easy"
+    difficulty: "Easy",
+    coordinates: [40.3485, -74.6572]
   },
   {
     id: 8,
@@ -64,7 +72,8 @@ const CAMPUS_LOCATIONS = [
     category: "Tradition",
     description: "A legendary rock formation near Lake Carnegie with campus folklore attached.",
     tokens: 10,
-    difficulty: "Medium"
+    difficulty: "Medium",
+    coordinates: [40.3385, -74.6612]
   }
 ];
 
@@ -83,6 +92,12 @@ function Locations({ visitedLocations, onVisitLocation }) {
         <h1>Discover Princeton</h1>
         <p>Explore {CAMPUS_LOCATIONS.length} hidden locations across campus</p>
       </div>
+
+      <CampusMap
+        locations={filteredLocations}
+        visitedLocations={visitedLocations}
+        onVisitLocation={onVisitLocation}
+      />
 
       <div className="filter-section">
         <label>Filter by category:</label>
